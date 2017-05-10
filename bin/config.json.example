@@ -1,0 +1,46 @@
+{
+    "servers": [
+        {
+            "port": "18080",
+            "rule": [
+                {
+                    "method": "json",
+                    "path": "^/$",
+                    "params": [
+                        {
+                            "key": "key",
+                            "rule": "eq",
+                            "value": "value"
+                        },
+                        {
+                            "key":"nest",
+                            "rule":"params",
+                            "value":[
+                                {
+                                    "key": "keynest",
+                                    "rule": "regex",
+                                    "value": "^\\d+$"
+                                }
+                            ]
+                        }
+                    ],
+                    "response": {
+                        "code": "200",
+                        "msg": "",
+                        "result": "333"
+                    }
+                },
+                {
+                    "method": "json",
+                    "path": "/",
+                    "params": [
+                    ],
+                    "response": {
+                        "res": "200",                        
+                        "info": {}
+                    }
+                }
+            ]
+        }
+    ]
+}

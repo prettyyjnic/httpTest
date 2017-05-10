@@ -1,0 +1,39 @@
+# simple util for http test
+
+# usage 
+```
+ copy the file "config.json.example" to "config.json"
+ modify the file "config.json" to what you want
+
+```
+
+# example
+```
+config.json: 
+{
+    "servers": [
+        {
+            "port": "18080",
+            "rule": [
+                {
+                    "method": "json",
+                    "path": "/",
+                    "params": [
+                    ],
+                    "response": {
+                        "res": "200",                        
+                        "info": {}
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+curl: http://localhost:18080/
+
+output: {
+  "info": {},
+  "res": "200"
+}
+``
